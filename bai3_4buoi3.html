@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+    .image-container {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 20px;
+    }
+    .image-container img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        opacity: 50%;
+        transition: opacity 0.3s;
+    }
+    .image-container img:hover {
+        opacity: 100%;
+    }
+    .return {
+        text-align: center;
+        align-items: center;
+    }
+</style>
+<body>
+    <div class="image-container">
+        <img src="https://images.pexels.com/photos/206359/pexels-photo-206359.jpeg">
+        <img src="https://images.pexels.com/photos/135940/pexels-photo-135940.jpeg">
+        <img src="https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg">
+    </div>
+    <div class="return">
+        <a href="index.html">
+            <input type="button" value="Trở về menu chính" style="background-color: #292929; color: white; padding: 10px 20px; border: none; border-radius: 5px;">
+        </a>
+    </div>
+</body>
+</html>
