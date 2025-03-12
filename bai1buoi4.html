@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Ngang và Dọc</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .horizontal-menu {
+            background-color: #333;
+            overflow: hidden;
+            display: flex;
+            padding: 10px 0;
+        }
+        .horizontal-menu a {
+            padding: 14px 20px;
+            text-decoration: none;
+            color: white;
+            display: block;
+        }
+        .horizontal-menu a:hover {
+            background-color: #575757;
+        }
+
+        .menu-container {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .vertical-menu {
+            width: 200px;
+            background-color: #222;
+            padding-top: 10px;
+        }
+        .vertical-menu a {
+            padding: 10px 15px;
+            text-decoration: none;
+            color: white;
+            display: block;
+        }
+        .vertical-menu ul li {
+            text-decoration: none;
+            list-style-type: none;
+        }
+        .vertical-menu a:hover {
+            background-color: #575757;
+        }
+
+        .content {
+            padding: 20px;
+            flex-grow: 1;
+        }
+        .logo {
+            width: 50px;
+            height: 50px;
+            align-items: center;
+            justify-items: center;
+            margin: 20px;
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/W3Schools_logo.svg/2175px-W3Schools_logo.svg.png" class="logo">
+        <div class="horizontal-menu">
+            <a href="https://www.w3schools.com/html/default.asp">HTML</a>
+            <a href="https://www.w3schools.com/css/default.asp">CSS</a>
+            <a href="https://www.w3schools.com/js/default.asp">JavaScript</a>
+            <a href="https://www.w3schools.com/sql/default.asp">SQL</a>
+            <a href="https://www.w3schools.com/php/default.asp">PHP</a>
+            <a href="https://www.w3schools.com/bootstrap/default.asp">Bootstrap</a>
+            <a href="https://www.w3schools.com/jquery/default.asp">jQuery</a>
+            <a href="https://www.w3schools.com/angular/default.asp">Angular</a>
+        </div>
+    </header>
+    
+
+    <div class="menu-container">
+        <div class="vertical-menu">
+            <span style="font-size: x-large; color: white; margin-left: 20px; margin-top: 10px;">HTML Tutorial</span>
+                <ul>
+                    <li><a href="https://www.w3schools.com/html/default.asp">HTML Home</a></li>
+                    <li><a href="https://www.w3schools.com/html/html_intro.asp">HTML Introduction</a></li>
+                    <li><a href="https://www.w3schools.com/html/html_editors.asp">HTML Editors</a></li>
+                    <li><a href="https://www.w3schools.com/html/html_basic.asp">HTML Basics</a></li>
+                    <li><a href="https://www.w3schools.com/html/html_elements.asp">HTML Elements</a></li>
+                    <li><a href="https://www.w3schools.com/html/html_attributes.asp">HTML Attributes</a></li>
+                    <li><a href="https://www.w3schools.com/html/html_headings.asp">HTML Headings</a></li>
+                    <li><a href="https://www.w3schools.com/html/html_paragraphs.asp">HTML Paragraphs</a></li>
+                    <li><a href="https://www.w3schools.com/html/html_styles.asp">HTML Styles</a></li>
+                    <li><a href="https://www.w3schools.com/html/html_formatting.asp">HTML Formatting</a></li>
+                    <li><a href="https://www.w3schools.com/html/html_quotation_elements.asp">HTML Quotations</a></li>
+                    <li><a href="https://www.w3schools.com/html/html_comments.asp">HTML Comments</a></li>
+                    <li><a href="https://www.w3schools.com/html/html_colors.asp">HTML Colors</a></li>
+                </ul>
+        </div>
+        <div class="content">
+            <h1>Learn HTML</h1>
+            <p>HTML is the standard markup language for Web pages.</p>
+            <p>With HTML you can create your own Website.</p>
+            <p>HTML is easy to learn - You will enjoy it!</p>
+        </div>
+    </div>
+</body>
+</html>
