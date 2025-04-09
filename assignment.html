@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</html>
+<body>
+    <h1>Chẵn hay lẻ?</h1>
+    <input type="number" id="soInput" placeholder="Nhập số">
+    <button onclick="hienThiKetQua()">Kiểm tra</button>
+    <p id="ketQua"></p>
+    <script>
+        function kiemTraChanLe(so) {
+            if (so % 2 === 0) {
+                return so + " là số chẵn.";
+            } else {
+                return so + " là số lẻ.";
+            }
+        }
+
+        function hienThiKetQua() {
+            var soCanKiemTra = document.getElementById("soInput").value;
+            var ketQua = kiemTraChanLe(Number(soCanKiemTra));
+            document.getElementById("ketQua").innerText = ketQua;
+        }
+    </script>
+</body>
