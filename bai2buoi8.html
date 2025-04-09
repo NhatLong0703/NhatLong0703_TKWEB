@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 2</title>
+</head>
+<body>
+    <h3>Nhập dãy số (cách nhau bằng dấu phẩy):</h3>
+    <input type="text" id="numbers" />
+    <button onclick="findMaxMin()">tìm số lớn nhất & nhỏ nhất</button>
+    <p id="result"></p>
+
+    <script>
+        function findMaxMin() {
+    const input = document.getElementById("numbers").value;
+    const arr = input.split(",").map(Number);
+
+    if (arr.some(isNaN)) {
+        alert("Vui lòng chỉ nhập các số, cách nhau bằng dấu phẩy.");
+        return;
+    }
+
+    const max = Math.max(...arr);
+    const min = Math.min(...arr);
+    document.getElementById("result").innerHTML = `Số lớn nhất: ${max} <br> Số nhỏ nhất: ${min}`;
+}
+
+    </script>
+</body>
