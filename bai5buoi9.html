@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Form Đăng Ký</title>
+    <style>
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <form onsubmit="return validateForm()">
+        <h3 style="color: purple;">FORM ĐĂNG KÝ</h3>
+        Họ: <input type="text" id="ho"><br>
+        Tên: <input type="text" id="ten"><br>
+        Ngày sinh: 
+        Ngày 
+        <select><option>1</option></select>
+        Tháng 
+        <select><option>1</option></select>
+        Năm 
+        <select><option>1980</option></select><br>
+        
+        Giới tính: 
+        <input type="radio" name="gioitinh"> Nam
+        <input type="radio" name="gioitinh"> Nữ <br>
+        
+        Số điện thoại: <input type="text" id="sdt"><br>
+        
+        Sở thích: 
+        <input type="checkbox"> Đọc sách
+        <input type="checkbox"> Xem phim
+        <input type="checkbox"> Nghe nhạc
+        <input type="checkbox"> Đá bóng<br>
+        
+        Khác: <textarea></textarea><br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+
+        <p id="error" class="error"></p>
+    </form>
+
+    <script>
+        function validateForm() {
+            var ho = document.getElementById("ho").value.trim();
+            var ten = document.getElementById("ten").value.trim();
+            var sdt = document.getElementById("sdt").value.trim();
+            var error = document.getElementById("error");
+            error.innerHTML = "";
+
+            if (ho === "" || ten === "" || sdt === "") {
+                error.innerHTML = "Vui lòng nhập đầy đủ họ, tên và số điện thoại.";
+                return false;
+            }
+
+            if (!/^\d{10}$/.test(sdt)) {
+                error.innerHTML = "Số điện thoại phải là 10 chữ số.";
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>

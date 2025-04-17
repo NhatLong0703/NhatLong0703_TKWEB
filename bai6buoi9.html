@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Slide Show</title>
+    <style>
+        #slideshow {
+            width: 400px;
+            margin: auto;
+            text-align: center;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+        button {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="slideshow">
+    <button onclick="prevImage()">&#10094;</button>
+    <img id="slide" src="https://images.genius.com/3e497e7f4219c60d8e2497fc1a4a5f68.1000x1000x1.png" alt="Slide">
+    <button onclick="nextImage()">&#10095;</button>
+</div>
+
+<script>
+    let images = ["https://images.genius.com/3e497e7f4219c60d8e2497fc1a4a5f68.1000x1000x1.png", "https://preview.redd.it/meet-the-grahams-cover-art-discussion-v0-bms5w51ogcyc1.jpg?width=517&format=pjpg&auto=webp&s=aa875ef498def26fc226a4823b04c3cddf4b8e9e", "https://i.scdn.co/image/ab67616d0000b2731ea0c62b2339cbf493a999ad"];
+    let current = 0;
+
+    function showImage(index) {
+        document.getElementById("slide").src = images[index];
+    }
+
+    function nextImage() {
+        current = (current + 1) % images.length;
+        showImage(current);
+    }
+
+    function prevImage() {
+        current = (current - 1 + images.length) % images.length;
+        showImage(current);
+    }
+</script>
+
+</body>
+</html>
