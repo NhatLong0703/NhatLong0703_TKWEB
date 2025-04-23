@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 2</title>
+    <style>
+        .menu {
+            width: 100px;
+            background-color: #0078d7;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .submenu {
+            display: none;
+            background-color: #f0f0f0;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            border: 1px solid #ccc;
+            width: 200px;
+        }
+
+        .submenu li {
+            padding: 10px;
+            text-align: left;
+            cursor: pointer;
+        }
+
+        .submenu li:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu" onclick="toggleMenu()">Thiết kế web</div>
+    <ul class="submenu" id="submenu">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Javascript</li>
+    </ul>
+
+    <script>
+        function toggleMenu() {
+            var submenu = document.getElementById("submenu");
+            if (submenu.style.display === "block") {
+                submenu.style.display = "none";
+            } else {
+                submenu.style.display = "block";
+            }
+        }
+    </script>
+    <div class="return">
+        <a href="index.html">
+            <input type="button" value="Trở về menu chính" style="background-color: #292929; color: white; padding: 10px 20px; border: none; border-radius: 5px;">
+        </a>
+    </div>
+</body>
+</html>

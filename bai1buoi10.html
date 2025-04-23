@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1</title>
+</head>
+<style>
+    .return {
+        text-align: left;
+        margin-top: 20px;
+    }
+</style>
+<body>
+    <h1>Not Like Us</h1>
+    <p>Certified Lover Boy? Certified pedophiles</p>
+    <p>Wop, wop, wop, wop, wop, Dot, fuck 'em up</p>
+    <p>Wop, wop, wop, wop, wop, I'ma do my stuff</p>
+    <p>Why you trollin' like a bitch? Ain't you tired?</p>
+    <p>Tryna strike a chord and it's probably A minor</p>
+    <p id="demo"></p>
+    <script>
+        var x = document.getElementsByTagName("p");
+        document.getElementById("demo").innerHTML = 
+        'The text in first paragraph (index 0) is: ' + x[0].innerHTML;
+    </script>
+    <div class="return">
+        <a href="index.html">
+            <input type="button" value="Trở về menu chính" style="background-color: #292929; color: white; padding: 10px 20px; border: none; border-radius: 5px;">
+        </a>
+    </div>
+</body>

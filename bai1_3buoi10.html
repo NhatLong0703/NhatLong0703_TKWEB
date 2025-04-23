@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Bài 1</title>
+    </head>
+    <style>
+        .font_chu {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode';
+        }
+        .mau_chu {
+            color: rgb(73, 73, 73);
+        }
+        .co_chu {
+            font-size: 13px;
+        }
+        .return {
+            text-align: left;
+            margin-top: 20px;
+        }
+    </style>
+    
+    <body>
+        <h1 class="font_chu" id="td1">MUSTARDDDDDDDDDDDD</h1>
+        <button onclick="tonho()">turn this tv off</button>
+    
+        <script>
+            var pt = document.getElementById("td1");
+            pt.classList.add("mau_chu", "co_chu");
+            function tonho() {
+                pt.classList.toggle("co_chu");
+            }
+        </script>
+        <div class="return">
+            <a href="index.html">
+                <input type="button" value="Trở về menu chính" style="background-color: #292929; color: white; padding: 10px 20px; border: none; border-radius: 5px;">
+            </a>
+        </div>
+    </body>
+</html>
